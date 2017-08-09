@@ -25,7 +25,7 @@ SECRET_KEY = 'vsp1hi9dm9v6q(9h8^!-yd88rvj$-051h(alcxd*9^1k$ioc#4'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'skaefer.pythonanywhere.com']
 
 
 # Application definition
