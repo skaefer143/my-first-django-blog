@@ -23,6 +23,11 @@ h1, h2, h3, h4 {
     color: #828282;
 }
 
+.created_on_date {
+	color: #828282;
+	font-style: italic;
+}
+
 .save {
     float: right;
 }

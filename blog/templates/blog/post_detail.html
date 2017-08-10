@@ -9,5 +9,10 @@
         {% endif %}
         <h1>{{ post.title }}</h1>
         <p>{{ post.text|linebreaksbr }}</p>
+        {% if post.created_date %}
+            <div class="created_on_date">
+                Created On: {{ post.created_date }}
+            </div>
+        {% endif %}
     </div>
 {% endblock %}
