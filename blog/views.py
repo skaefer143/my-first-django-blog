@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.utils import timezone
 from .models import Post
+from .forms import PostForm
 
 # Create your views here.
 
@@ -9,5 +10,9 @@ def post_list(request):
 	return render(request, 'blog/post_list.html', {'posts': our_posts})
 
 def post_detail(request, pk):
-	post = get_object_or_404(Post, pk=pk)
+	post = get_object_or_404(Post, pk=pk) # In case there is no Post with the given pk, it will display the Page Not Found 404 Page.
 	return render(request, 'blog/post_detail.html', {'post': post})
+
+def post_new(request):
+	form = PostForm()
+	return render(request, 'blog/post_edit.html', {'form': form})
